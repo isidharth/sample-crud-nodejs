@@ -1,0 +1,7 @@
+org: iamsid
+app: crud-app
+component: express
+name: express-starter
+
+inputs:
+  src: ./

@@ -5,3 +5,9 @@ name: express-starter
 
 inputs:
   src: ./
+
+functions:
+  app:
+    handler: app.handler
+    events:
+      - http: ANY /

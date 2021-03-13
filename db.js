@@ -12,16 +12,16 @@ module.exports = () => class Db {
                                         useUnifiedTopology: true,
 										                    poolSize: 10
 									                      },(err, conn) => {
-                                          
+
                                           console.log("Connected to Database...")
 
                                           assert.equal(null, err);
 
-                                          let db = conn.db(mongo.collection);
+                                          let mongo = conn.db(db.collection);
 
-                                          this.db = db;
+                                          this.db = mongo;
                                           this.collection = {
-                                                            'users':db.collection('users')
+                                                            'users':mongo.collection('users')
                                                             }
 
 										                       resolve();
